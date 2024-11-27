@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Form</title>
+    <style>
+        body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      font-size: 24px;
+
+      /* Static Gradient for Fallback */
+      background: rgb(0,36,0);
+      background: linear-gradient(299deg, rgba(0,36,0,1) 0%, rgba(62,105,133,1) 55%, rgba(0,212,255,1) 100%);
+
+      /* Animation */
+      background-size: 400% 400%;
+      animation: gradientMove 6.5s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background: rgb(0,36,0);
+background: linear-gradient(90deg, rgba(0,36,0,1) 0%, rgba(68,100,138,1) 35%, rgba(0,212,255,1) 100%);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #dddddd;
+        }
+
+        .form-section {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .form-section label {
+            font-weight: bold;
+            color: #fff8f8;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            margin-left: 5px;
+        }
+
+        .section-title {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #f4f4f4;
+            padding-bottom: 5px;
+        }
+
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .example-text {
+            font-style: italic;
+            color: #888;
+        }
+
+        .next-button {
+        background: linear-gradient(45deg, #1045c1, #7ec32a, #322cd8);
+        background-size: 200% 200%;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 5px;
+        animation: gradientMove 3s ease infinite;
+        cursor: pointer;
+        transition: transform 0.2s;
+        text-decoration: none;
+    }
+
+    .btn-submit:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1rem;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="date"],
+            select {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .next-button {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+            width: 80%;
+            margin: 50px auto;
+            background: rgb(0,36,0);
+background: linear-gradient(90deg, rgba(0,36,0,1) 0%, rgba(68,100,138,1) 35%, rgba(0,212,255,1) 100%);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="date"],
+            select {
+                font-size: 13px;
+                padding: 8px;
+            }
+
+            .next-button {
+                padding: 8px 10px;
+                font-size: 0.8rem;
+            }
+        }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1>College Admission Form</h1>
+
+        <form action="#" method="post">
+
+            <!-- Name Section -->
+            <div class="form-section">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-section">
+                <label for="middleName">Middle Name</label>
+                <input type="text" id="middleName" name="middleName">
+            </div>
+
+            <div class="form-section">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <!-- Birthdate Section -->
+            <div class="form-section">
+                <label for="birthDate" class="section-title">Birthdate</label>
+                <div class="form-section">
+                    <select id="month" name="month" required>
+                        <option value="">Select Month</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <select id="day" name="day" required>
+                        <option value="">Select Day</option>
+                        <!-- Dynamically generate days (1-31) -->
+                        <script>
+                            for (let i = 1; i <= 31; i++) {
+                                document.write('<option value="'+(i<10?'0':'')+i+'">'+i+'</option>');
+                            }
+                        </script>
+                    </select>
+                    <select id="year" name="year" required>
+                        <option value="">Select Year</option>
+                        <!-- Dynamically generate years (2000-2025) -->
+                        <script>
+                            for (let i = 2025; i >= 1900; i--) {
+                                document.write('<option value="'+i+'">'+i+'</option>');
+                            }
+                        </script>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Gender Section -->
+            <div class="form-section">
+                <label class="section-title">Gender</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Male" required> Male</label>
+                    <label><input type="radio" name="gender" value="Female" required> Female</label>
+                </div>
+            </div>
+
+            <!-- Citizenship Section -->
+            <div class="form-section">
+                <label for="citizenship">Citizenship</label>
+                <select id="citizenship" name="citizenship" required>
+                    <option value="">Select Country</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="India">India</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="Australia">Australia</option>
+                    <!-- Add more countries as needed -->
+                </select>
+            </div>
+
+            <!-- Contact Information Section -->
+            <div class="form-section">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-section">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            </div>
+
+            <!-- Mailing Address Section -->
+            <div class="form-section">
+                <label for="street">Street Address</label>
+                <input type="text" id="street" name="street" required>
+            </div>
+
+            <div class="form-section">
+                <label for="street2">Street Address Line 2</label>
+                <input type="text" id="street2" name="street2">
+            </div>
+
+            <div class="form-section">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="form-section">
+                <label for="state">State/Province</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+
+            <div class="form-section">
+                <label for="zipcode">Postal/Zip Code</label>
+                <input type="text" id="zipcode" name="zipcode" required>
+            </div>
+
+            <!-- Emergency Contact Section -->
+            <div class="form-section">
+                <label class="section-title">Emergency Contact</label>
+                <label for="emergencyFirstName">First Name</label>
+                <input type="text" id="emergencyFirstName" name="emergencyFirstName" required>
+            </div>
+
+            <div class="form-section">
+                <label for="emergencyLastName">Last Name</label>
+                <input type="text" id="emergencyLastName" name="emergencyLastName" required>
+            </div>
+
+            <div class="form-section">
+                <label for="relationship">Relationship</label>
+                <input type="text" id="relationship" name="relationship" required>
+            </div>
+
+            <div class="form-section">
+                <label for="emergencyEmail">Email</label>
+                <input type="email" id="emergencyEmail" name="emergencyEmail" required>
+            </div>
+
+            <div class="form-section">
+                <label for="emergencyPhone">Phone Number</label>
+                <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+            </div>
+
+            <!-- Languages Section -->
+            <div class="form-section">
+                <label class="section-title">Do you speak any languages other than English?</label>
+                <select id="languages" name="languages" required>
+                    <option value="#"></option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="preferNot">Prefer not to say</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            
+          <div class="button-group">
+            <a button type="submit" class="next-button" href="educ.html">Next</button></a>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

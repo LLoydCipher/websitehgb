@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HGBaquiran College</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  </head>
+  
+<body>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('background.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+header {
+  color: #fff;
+  padding: 2px 0;
+  margin: 20px;
+  text-align:center;
+}
+
+header nav {
+  display: flex;
+  justify-content: center; /* header navi sa right  */
+  align-items: center;
+  margin: 10px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Menu Icon */
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Navigation Links */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background: rgba(0, 121, 242, 0.9);
+  border-radius: 8px;
+  padding: 10px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 999;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Hidden Navigation */
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+}
+
+/* Visible Navigation */
+.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1);
+}
+
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  height: 700px;
+  border-radius: 5px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.9); /* White background with transparency */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #007BFF;
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px 0;
+  color: #fff6f6;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    /* Smaller menu icon for tablets and smaller screens */
+    .menu-icon {
+      font-size: 28px;
+      top: 15px;
+      right: 15px;
+    }
+
+    nav ul {
+      top: 60px;
+      right: 10px;
+      padding: 8px;
+    }
+
+    nav ul li a {
+      font-size: 20px;
+      width: 36px;
+      height: 36px;
+    }
+
+    main {
+      padding: 15px;
+      margin: 10px;
+      width: auto;
+    }
+
+    section h2 {
+      font-size: 20px;
+    }
+
+    section p, section ul {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* Adjustments for small phones */
+    .menu-icon {
+      font-size: 24px;
+    }
+
+    nav ul {
+      top: 50px;
+      padding: 5px;
+    }
+
+    nav ul li a {
+      font-size: 18px;
+      width: 32px;
+      height: 32px;
+    }
+
+    main {
+      padding: 10px;
+      margin: 5px;
+      width: 95%;
+    }
+
+    section h2 {
+      font-size: 18px;
+    }
+
+    section p, section ul {
+      font-size: 14px;
+    }
+
+    footer {
+      font-size: 14px;
+    }
+  }
+
+  </style>
+  <header>
+    <nav>
+      <div class="menu-icon" id="menuIcon">
+        <i class="fas fa-bars"></i> <!-- Menu icon -->
+      </div>
+      <ul id="navLinks" class="hidden">
+        <li><a href="index.html" title="Home"><i class="fas fa-home"></i></a></li>
+        <li><a href="course.html" title="Courses"><i class="fas fa-book"></i></a></li>
+        <li><a href="contactUs.html" title="Contact"><i class="fas fa-envelope"></i></a></li>
+        <li><a href="aboutUs.html" title="About"><i class="fas fa-info-circle"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <main>
+    <section class="about">
+      <h2>About Us</h2>
+      <p>Welcome to HGBaquiran College, where we are dedicated to providing quality education and fostering a supportive learning environment. Our mission is to empower students to achieve their academic and personal goals.</p>
+      <p>Founded in 2003, HGBaquiran College has a rich history of excellence in education. We offer a variety of programs designed to meet the diverse needs of our students.</p>
+    </section>
+
+    <section class="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Academic Counseling</li>
+        <li>Extracurricular Activities</li>
+        <li>Career Services</li>
+        <li>Student Support Services</li>
+      </ul>
+    </section>
+
+    <section class="mission">
+      <h2>Our Mission</h2>
+      <p>HGBaquiran College commits itself to offer quality education that would develop a well rounded human being who possesses desirable values, attitudes and skills thereby enabling him/her to be locally competitive, live a productive life, cope with the social and moral challenges of the modern world and be able to contribute to nation building.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 HGBaquiran College. All rights reserved.</p>
+  </footer>
+</body>
+<script>
+
+  const menuIcon = document.getElementById('menuIcon');
+  const navLinks = document.getElementById('navLinks');
+
+  menuIcon.addEventListener('click', () => {
+    // Toggle visibility
+    navLinks.classList.toggle('hidden');
+    navLinks.classList.toggle('visible');
+  });
+
+</script>
+</html>
